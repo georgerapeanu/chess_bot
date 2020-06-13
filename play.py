@@ -5,8 +5,7 @@ import time;
 def __main__():
     print("gameid");
     gameid = str(input()).replace('\n','');
-    print("token");
-    token = str(input()).replace('\n','');
+    token = str(open("token","r").read()).replace("\n","");
     game = chessGame.chessGame(gameid,token);
     while(True):
         game.make_move();
